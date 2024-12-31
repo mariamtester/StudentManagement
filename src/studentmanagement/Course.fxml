@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentmanagement.DashboardInstructorController">
+    <stylesheets>
+        <URL value="@dashboardinstructor.css" />
+    </stylesheets>
+   <children>
+      <Label contentDisplay="CENTER" layoutX="226.0" layoutY="7.0" prefHeight="23.0" prefWidth="162.0" text="CourseDashboard" textFill="#141059">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="CourseTable" layoutX="84.0" layoutY="37.0" prefHeight="260.0" prefWidth="450.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="48.79998779296875" text="ID" />
+          <TableColumn fx:id="coursename" prefWidth="204.0" text="Course Name" />
+          <TableColumn fx:id="coursedetails" prefWidth="273.60003662109375" text="Course Details" />
+        </columns>
+      </TableView>
+      <Label layoutX="123.0" layoutY="320.0" prefHeight="18.0" prefWidth="83.0" text="Course Name" />
+      <Label layoutX="42.0" layoutY="351.0" text="Course details" />
+      <TextField fx:id="courseDetailsField" layoutX="125.0" layoutY="352.0" prefHeight="34.0" prefWidth="282.0" promptText="course details" />
+      <TextField fx:id="courseNameField" layoutX="203.0" layoutY="316.0" promptText="course name" />
+      <Button fx:id="addCourseButton" layoutX="454.0" layoutY="308.0" mnemonicParsing="false" onAction="#addCourse" text="Add Course" />
+      <Button fx:id="deleteCourseButton" layoutX="450.0" layoutY="347.0" mnemonicParsing="false" onAction="#deleteCourse" text="Delete Course" />
+      <Label layoutX="22.0" layoutY="315.0" prefHeight="18.0" prefWidth="19.0" text="ID" />
+      <TextField fx:id="courseIdField" layoutX="42.0" layoutY="312.0" prefHeight="26.0" prefWidth="34.0" promptText="id" />
+   </children>
+</AnchorPane>
