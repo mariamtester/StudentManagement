@@ -39,7 +39,7 @@ import java.util.List;
     double score=student.getScore();
     String grade;
     if(score>=90){
-    grade="vergood";
+    grade="verygood";
     } else if(score>=80){
     grade="good" ;
     }else if(score>=70){

@@ -82,7 +82,7 @@ public class StudentDashboardController implements Initializable {
   attendance.setCellValueFactory(new PropertyValueFactory<Student, String>("attendance"));
   score.setCellValueFactory(new PropertyValueFactory<Student, Double>("score"));
   studentTable.setItems(studentList);
-  studentList.add(new Student("4","sarah","sarah@yahoo.com","pass","present",80));
+  studentList.add(new Student("4","sarah","sarah@yahoo.com","good","present",80));
   name.setCellFactory(TextFieldTableCell.forTableColumn());
   studentTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
   }    
@@ -139,7 +139,7 @@ public class StudentDashboardController implements Initializable {
     double score=student.getScore();
     String grade = null;
     if(score>=90){
-    grade="vergood";
+    grade="verygood";
     } else if(score>=80){
     grade="good" ;
     }else if(score>=70){
